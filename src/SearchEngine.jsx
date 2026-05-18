@@ -7,17 +7,19 @@ export default function SearchEngine() {
   const [result, setResult] = useState("");
 
   function handleResponse(response) {
-    // SheCodes API geeft: response.data.word
-    setResult(response.data.word);
+    // Free Dictionary API geeft een array terug
+    // response.data[0].word = het woord
+    setResult(response.data[0].word);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    let apiKey = "135f02bffcta720ff4c241394b466o99"
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(function (error) {
+      setResult("Not found");
+    });
   }
 
   return (
@@ -40,7 +42,7 @@ export default function SearchEngine() {
         <div className="card p-4 shadow-sm result-card">
           <h2 className="result-title">{result}</h2>
           <p className="text-muted fst-italic">
-            (meer info komt zodra we meanings toevoegen)
+            (meer info komt zodra we meanings tonen)
           </p>
         </div>
       )}
