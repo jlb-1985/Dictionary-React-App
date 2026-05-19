@@ -40,27 +40,21 @@ export default function SearchEngine() {
         </div>
       </form>
 
-      {/* Error‑melding */}
+      {/* ⭐ Gouden error‑melding */}
       {error && (
-        <div
-          className="card p-4 shadow-sm"
-          style={{
-            border: "1px solid rgba(255, 215, 0, 0.5)",
-            background: "#fff7dd",
-          }}
-        >
-          <h4 className="fw-bold" style={{ color: "#b8962f" }}>
+        <div className="error-card">
+          <h4 className="error-title">
             Word not found — try another word.
           </h4>
         </div>
       )}
 
-      {/* Resultaten */}
+      {/* ⭐ Resultaten */}
       {result && !error && (
         <div className="card p-4 shadow-sm result-card">
           <h2 className="result-title">{result.word}</h2>
 
-          {/*Fonetiek + Audio */}
+          {/* ⭐ Fonetiek + Audio */}
           {result.phonetics && result.phonetics[0] && (
             <div className="d-flex align-items-center gap-3">
               {result.phonetics[0].text && (
@@ -69,7 +63,7 @@ export default function SearchEngine() {
 
               {result.phonetics[0].audio && (
                 <button
-                  className="btn btn-sm btn-outline-secondary"
+                  className="audio-button"
                   onClick={() => {
                     const audio = new Audio(result.phonetics[0].audio);
                     audio.play();
@@ -81,10 +75,10 @@ export default function SearchEngine() {
             </div>
           )}
 
-          {/*  Alle Betekenissen */}
+          {/* ⭐ Alle meanings */}
           {result.meanings &&
             result.meanings.map((meaning, index) => (
-              <div key={index} className="mt-4">
+              <div key={index} className="meaning-block">
                 <h5 className="fw-bold text-uppercase">
                   {meaning.partOfSpeech}
                 </h5>
@@ -96,12 +90,18 @@ export default function SearchEngine() {
                   </p>
                 ))}
 
-                {/* ⭐ Synoniemen */}
+                {/* ⭐ Synoniemen als badges */}
                 {meaning.synonyms && meaning.synonyms.length > 0 && (
-                  <p className="mt-2">
-                    <strong>Synonyms:</strong>{" "}
-                    {meaning.synonyms.slice(0, 10).join(", ")}
-                  </p>
+                  <div className="mt-2">
+                    <strong>Synonyms:</strong>
+                    <div className="mt-1">
+                      {meaning.synonyms.slice(0, 10).map((syn, i) => (
+                        <span key={i} className="synonym-badge">
+                          {syn}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             ))}
