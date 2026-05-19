@@ -46,27 +46,24 @@ export default function SearchEngine() {
 
     {/* Fonetiek */}
     {result.phonetics && result.phonetics[0] && (
-      <p className="text-muted">
-        {result.phonetics[0].text}
-      </p>
+      <p className="text-muted">{result.phonetics[0].text}</p>
     )}
 
-    {/* Definitie */}
-    {result.meanings && result.meanings[0] && (
-      <p>
-        {result.meanings[0].definitions[0].definition}
-      </p>
-    )}
+    {/* Alle meanings */}
+    {result.meanings && result.meanings.map((meaning, index) => (
+      <div key={index} className="mt-3">
+        <h5 className="fw-bold text-uppercase">{meaning.partOfSpeech}</h5>
 
-    {/* Synoniemen */}
-    {result.meanings[0].synonyms &&
-      result.meanings[0].synonyms.length > 0 && (
-        <p className="mt-3">
-          <strong>Synonyms:</strong> {result.meanings[0].synonyms.join(", ")}
-        </p>
-      )}
+        {meaning.definitions.map((definition, i) => (
+          <p key={i} className="mb-2">
+            • {definition.definition}
+          </p>
+        ))}
+      </div>
+    ))}
   </div>
 )}
+
     </div>
   );
 }
