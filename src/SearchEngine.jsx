@@ -5,6 +5,7 @@ import axios from "axios";
 export default function SearchEngine() {
   const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
+  const [photos, setPhotos] = useState(null);
   const [error, setError] = useState(false);
 
   function handleResponse(response) {
@@ -15,6 +16,7 @@ export default function SearchEngine() {
   function handleSubmit(event) {
     event.preventDefault();
 
+    // Dictionary API
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
     axios
@@ -23,6 +25,18 @@ export default function SearchEngine() {
       .catch(() => {
         setError(true);
         setResult(null);
+      });
+
+    // ⭐ Pexels API
+    let pexelsApiKey = "fUKMbY9lZkevm8tkFAXaA3ua3fuvnuBscTk55YGXJakuTRYxwd3etw0M";
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+
+    axios
+      .get(pexelsUrl, {
+        headers: { Authorization: pexelsApiKey },
+      })
+      .then((response) => {
+        setPhotos(response.data.photos);
       });
   }
 
@@ -105,6 +119,20 @@ export default function SearchEngine() {
                 )}
               </div>
             ))}
+
+          {/* ⭐ FOTO'S VAN PEXELS */}
+          {photos && (
+            <div className="photo-grid mt-4">
+              {photos.map((photo) => (
+                <img
+                  src={photo.src.medium}
+                  alt={keyword}
+                  key={photo.id}
+                  className="dictionary-photo"
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
