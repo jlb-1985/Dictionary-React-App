@@ -1,44 +1,128 @@
-/* --- Royal Meaning Block --- */
-.meaning-block {
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  padding-top: 15px;
-  margin-top: 25px;
-}
+/* --------------------------------------------- */
+/* GLOBAL ROYAL BACKGROUND + TYPOGRAPHY          */
+/* --------------------------------------------- */
 
-/* --- Royal Audio Button --- */
-.audio-button {
-  background: #d4af37;
-  border: none;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
+body {
+  background: linear-gradient(180deg, #f8f3e6 0%, #ffffff 40%, #fdf7e3 100%);
   font-family: 'Cinzel Decorative', serif;
-  letter-spacing: 1px;
-  font-size: 14px;
 }
 
-.audio-button:hover {
-  background: #b8962f;
-}
-
-/* --- Synonym Badges --- */
-.synonym-badge {
-  display: inline-block;
-  background: #fff7dd;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  padding: 4px 10px;
-  margin: 3px;
-  border-radius: 6px;
-  font-size: 14px;
+h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-/* --- Royal Error Card --- */
+/* --------------------------------------------- */
+/* SEARCH INPUT + BUTTON                         */
+/* --------------------------------------------- */
+
+.search-input {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 12px;
+}
+
+.search-button {
+  background-color: #d4af37 !important;
+  border-color: #d4af37 !important;
+  color: #fff;
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+}
+
+.search-button:hover {
+  background-color: #b8962f !important;
+  border-color: #b8962f !important;
+}
+
+/* --------------------------------------------- */
+/* RESULT CARD (ROYAL STYLE)                     */
+/* --------------------------------------------- */
+
+.result-card {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* --------------------------------------------- */
+/* ROYAL TITLE                                   */
+/* --------------------------------------------- */
+
+.result-title {
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 4px;
+  font-size: 42px;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------- */
+/* MEANING BLOCK (GOLDEN SEPARATOR)              */
+/* --------------------------------------------- */
+
+.meaning-block {
+  border-top: 1px solid rgba(212, 175, 55, 0.45);
+  padding-top: 18px;
+  margin-top: 28px;
+}
+
+/* --------------------------------------------- */
+/* ROYAL AUDIO BUTTON                            */
+/* --------------------------------------------- */
+
+.audio-button {
+  background: linear-gradient(135deg, #d4af37, #b8962f);
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.audio-button:hover {
+  background: linear-gradient(135deg, #b8962f, #8c6f1f);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------- */
+/* SYNONYM BADGES                                */
+/* --------------------------------------------- */
+
+.synonym-badge {
+  display: inline-block;
+  background: #fff9e8;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+  transition: 0.2s ease-in-out;
+}
+
+.synonym-badge:hover {
+  background: #f7e7b8;
+  cursor: pointer;
+}
+
+/* --------------------------------------------- */
+/* ROYAL ERROR CARD                              */
+/* --------------------------------------------- */
+
 .error-card {
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  background: #fff7dd;
-  padding: 20px;
-  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  background: #fff8e1;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
   margin-bottom: 20px;
 }
 
@@ -46,4 +130,5 @@
   color: #b8962f;
   font-family: 'Cinzel Decorative', serif;
   letter-spacing: 2px;
+  font-size: 20px;
 }
