@@ -137,3 +137,44 @@ body {
   letter-spacing: 2px;
   font-size: 20px;
 }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+
+.dictionary-photo {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  object-fit: cover;
+
+  /* Fade-in */
+  opacity: 0;
+  animation: fadeInRoyal 0.8s ease-in-out forwards;
+  transform: translateY(8px);
+  transition: 0.25s ease-in-out;
+}
+
+.dictionary-photo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  cursor: pointer;
+}
+
+
+@keyframes fadeInRoyal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
