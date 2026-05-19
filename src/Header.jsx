@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="py-4 mb-4 border-bottom">
+    <header className="py-4 mb-4">
       <div className="container d-flex align-items-center gap-3">
         <img
           src="/logo.png"
