@@ -1,19 +1,22 @@
-/* --------------------------------------------- */
-/* GLOBAL ROYAL BACKGROUND + TYPOGRAPHY          */
-/* --------------------------------------------- */
+
 
 body {
   background: linear-gradient(180deg, #f8f3e6 0%, #ffffff 40%, #fdf7e3 100%);
   font-family: 'Cinzel Decorative', serif;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
+h1,{
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 4px;
+  font-size: 42px;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow:
+    1px 1px 0 #d4af37,
+    2px 2px 0 #b8962f;
 }
 
-/* --------------------------------------------- */
-/* SEARCH INPUT + BUTTON                         */
-/* --------------------------------------------- */
 
 .search-input {
   font-family: 'Playfair Display', serif;
