@@ -27,7 +27,7 @@ export default function SearchEngine() {
         setResult(null);
       });
 
-    // ⭐ Pexels API
+    // Pexels API
     let pexelsApiKey = "fUKMbY9lZkevm8tkFAXaA3ua3fuvnuBscTk55YGXJakuTRYxwd3etw0M";
     let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
 
@@ -89,7 +89,7 @@ export default function SearchEngine() {
             </div>
           )}
 
-          {/* ⭐ Alle meanings */}
+          {/* Alle betekenissen */}
           {result.meanings &&
             result.meanings.map((meaning, index) => (
               <div key={index} className="meaning-block">
@@ -104,7 +104,7 @@ export default function SearchEngine() {
                   </p>
                 ))}
 
-                {/* ⭐ Synoniemen als badges */}
+                {/* Synoniemen als badges */}
                 {meaning.synonyms && meaning.synonyms.length > 0 && (
                   <div className="mt-2">
                     <strong>Synonyms:</strong>
@@ -120,7 +120,7 @@ export default function SearchEngine() {
               </div>
             ))}
 
-          {/* ⭐ FOTO'S VAN PEXELS */}
+          {/* FOTO'S VAN PEXELS */}
           {photos && (
             <div className="photo-grid mt-4">
               {photos.map((photo) => (
