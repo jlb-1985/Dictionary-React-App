@@ -1,9 +1,10 @@
 
 
 body {
-  background: linear-gradient(180deg, #f8f3e6 0%, #ffffff 40%, #fdf7e3 100%);
+
   font-family: 'Cinzel Decorative', serif;
 }
+
 
 .header-title {
   font-family: 'Cinzel Decorative', serif;
@@ -25,7 +26,7 @@ body {
 .header-title::after {
   content: "";
   display: block;
-  width: 90px;
+  width: 500px;
   height: 4px;
   background: linear-gradient(90deg, #d4af37, #b8962f);
   margin-top: 12px;
@@ -67,21 +68,13 @@ body {
   border-color: #b8962f !important;
 }
 
-/* --------------------------------------------- */
-/* RESULT CARD (ROYAL STYLE)                     */
-/* --------------------------------------------- */
-
 .result-card {
   border: 1px solid rgba(212, 175, 55, 0.35);
   background: #ffffff;
   border-radius: 14px;
   padding: 35px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* --------------------------------------------- */
-/* ROYAL TITLE                                   */
-/* --------------------------------------------- */
+}-------------------------------------- */
 
 .result-title {
   font-family: 'Cinzel Decorative', serif;
@@ -91,21 +84,11 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
-/* --------------------------------------------- */
-/* MEANING BLOCK (GOLDEN SEPARATOR)              */
-/* --------------------------------------------- */
-
 .meaning-block {
   border-top: 1px solid rgba(212, 175, 55, 0.45);
   padding-top: 18px;
   margin-top: 28px;
 }
-
-/* --------------------------------------------- */
-/* ROYAL AUDIO BUTTON                            */
-/* --------------------------------------------- */
-
 .audio-button {
   background: linear-gradient(135deg, #d4af37, #b8962f);
   border: none;
@@ -122,11 +105,6 @@ body {
   background: linear-gradient(135deg, #b8962f, #8c6f1f);
   transform: translateY(-2px);
 }
-
-/* --------------------------------------------- */
-/* SYNONYM BADGES                                */
-/* --------------------------------------------- */
-
 .synonym-badge {
   display: inline-block;
   background: #fff9e8;
@@ -143,10 +121,6 @@ body {
   background: #f7e7b8;
   cursor: pointer;
 }
-
-/* --------------------------------------------- */
-/* ROYAL ERROR CARD                              */
-/* --------------------------------------------- */
 
 .error-card {
   border: 1px solid rgba(212, 175, 55, 0.6);
