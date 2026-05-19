@@ -5,20 +5,33 @@ body {
   font-family: 'Cinzel Decorative', serif;
 }
 
-h1,
-/* --- Royal Dictionary Title --- */
- {
+.header-title {
   font-family: 'Cinzel Decorative', serif;
-  letter-spacing: 4px;
-  font-size: 42px;
-  color: #2c2c2c;
+  font-size: 48px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  margin-bottom: 18px;
-  position: relative;
+  color: #2c2c2c;
 
-  /* Subtiele gouden glow */
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.35);
+  /* subtiele gouden glow */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
+
+  /* spacing */
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
 }
+
+/* gouden onderlijn */
+.header-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #b8962f);
+  margin-top: 12px;
+  border-radius: 3px;
+}
+
 
 /* Luxe gouden onderlijn */
 .result-title::after {

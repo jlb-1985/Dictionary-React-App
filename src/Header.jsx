@@ -7,8 +7,9 @@ export default function Header() {
           alt="Dictionary Logo"
           style={{ width: "400px", height: "400px" }}
         />
-        <h1 className="m-0 fw-bold"> Dictionary App</h1>
+       <h1 className="header-title">Dictionary App</h1>
       </div>
     </header>
   );
 }
+
